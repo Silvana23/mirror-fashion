@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/produto.css">
-    <script type="text/javascript" src="js/produto.js"></script>
+
 </head>
 
 <body>
@@ -34,6 +34,9 @@
         <div class="produto">
             <h1>Fuzzy Cardigan</h1>
             <p>por apenas R$ 129,90</p>
+
+            <div class="fb-like" data-href="http://www.mirrorfashion.net" data-send="false" data-layout="box_count" data-width="58" data-show-faces="false"></div>
+
             <form>
                 <fieldset class="cores">
                     <legend>Escolha a cor:</legend>
@@ -54,7 +57,7 @@
                 <fieldset class="tamanhos">
                     <legend>Escolha o tamanho:</legend>
                     <input type="range" min="36" max="46" value="42" step="2" name="tamanho" id="tamanho">
-                    <output for="tamanho" name="valor  tamanho">42</output>
+                    <output for="tamanho" name="valortamanho">42</output>
                 </fieldset>
                 <button class="comprar">Comprar</button>
             </form>
@@ -94,7 +97,7 @@
 
         </div>
     </div>
-
+    <script type="text/javascript" src="js/produto.js"></script>
 
     <footer>
         <div class="container">
@@ -106,6 +109,20 @@
             </ul>
         </div>
     </footer>
+
+    <div id="fb-root"></div>
+    <script>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "http://connect.facebook.net/pt_BR/all.js#xfbml=1";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+
 </body>
 
 </html>

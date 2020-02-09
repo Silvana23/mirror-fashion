@@ -1,12 +1,13 @@
-<!doctype	html>
+<!Doctype	html>
 <html>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.css">
-    <link rel="stylesheet" href="css/checkout">
+    <link rel="stylesheet" href="css/checkout.css">
+
+
     <title>Checkout Mirror Fashion</title>
 </head>
 
@@ -14,7 +15,7 @@
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
 
-            <div class="row" <div class="row">
+            <div class="row">
                 <h1 class="display-4">Ótima escolha!</h1>
                 <p class="lead">Obrigado por comprar na Mirror Fashion! Preencha seus dados para efetivar a compra.</p>
             </div>
@@ -25,22 +26,43 @@
                     <div class="card-header">
                         Sua compra
                     </div>
-                </div>
-                <div class="card-body">
-                    <img src="img/produtos/foto1-verde.png" alt="Fuzzy Cardigan" class="img-thumbnail mb-3">
-                    <dl>
-                        <dt>Produto</dt>
-                        <dd>Fuzzy Cardigan</dd>
-                        <dt>Cor</dt>
-                        <dd>Verde</dd>
-                        <dt>Tamanho</dt>
-                        <dd>40</dd>
-                        <dt>Preço</dt>
-                        <dd>R$ 129,90</dd>
-                    </dl>
-                </div>
-            </div>
 
+                    <div class="card-body">
+                        <img src="img/produtos/foto1-verde.png" alt="Fuzzy Cardigan" class="img-thumbnail mb-3">
+                        <dl>
+
+                            <dt>Produto</dt>
+                            <dd>Fuzzy Cardigan</dd>
+                            <dt>Cor</dt>
+                            <dd>Verde</dd>
+                            <dt>Tamanho</dt>
+                            <dd>40</dd>
+                            <dt>Preço</dt>
+                            <dd>R$ 129,90</dd>
+                        </dl>
+                    </div>
+
+                </div>
+                <div class="card	mb-3">
+                    <div class="card-body">
+
+
+                        <div class="form-group">
+                            <label for="qtd">Quantidade:</label>
+                            <input type="number" id="qtd" min="1" max="99" value="1" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="total">Total:</label>
+                            <output id="total" class="form-control">  R$129,90 </output>
+                        </div>
+                    </div>
+                    <dd id="preco">R$129.90</dd>
+                    <output for="qtd preco" id="total" class="form-control">
+                   R$129,90
+               </output>
+                </div>
+
+            </div>
             <form col-md-8>
                 <div class="row">
                     <fieldset class="col-lg-6">
@@ -51,11 +73,11 @@
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" class="form-control" id="email" name="email" required>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="email@exemplo.com" required>
                         </div>
                         <div class="form-group">
                             <label for="cpf">CPF</label>
-                            <input type="text" class="form-control" id="cpf" name="cpf" placeholder="000.000.00-00" required>
+                            <input type="text" class="form-control" id="cpf" name="cpf" placeholder="000.000.00-00" data-mask="999.999.999-99" required>
                         </div>
                         <div class="form-group	custom-control	custom-checkbox">
                             <input type="checkbox" class="custom-control-input" id="newsletter" value="sim" checked>
@@ -69,7 +91,7 @@
                         <legend>Cartão de crédito</legend>
                         <div class="form-group">
                             <label for="numero-cartao">Número	-	CVV</label>
-                            <input type="text" class="form-control" id="numero-cartao" name="numero-cartao" placeholder="email@exemplo.com">
+                            <input type="text" class="form-control" id="numero-cartao" name="numero-cartao" data-mask="9999	9999 9999 9999-999" placeholder=>
                         </div>
                         <div class="form-group">
                             <label for="bandeira-cartao">Bandeira</label>
@@ -96,6 +118,8 @@
 
     </div>
     </div>
+    <script type="text/javascript" src="js/total.js"></script>
+    <script type="text/javascript" src="js/inputmask-plugin.js"></script>
 </body>
 
 </html>
